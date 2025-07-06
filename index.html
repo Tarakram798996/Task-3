@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Responsive Web Project</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header>
+        <h1>Interactive Responsive Web</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
+    </header>
+    <nav>
+        <a href="#responsive">Responsive</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#carousel">Carousel</a>
+        <a href="#api">API</a>
+    </nav>
+    <main>
+        <section id="responsive">
+            <h2>Responsive Layout</h2>
+            <p>This layout adapts to different screen sizes using Flexbox and CSS Grid.</p>
+        </section>
+        <section id="quiz">
+            <h2>Interactive Quiz</h2>
+            <p id="question">What is 2 + 2?</p>
+            <div class="btn-group">
+                <button onclick="submitAnswer('3')">3</button>
+                <button onclick="submitAnswer('4')">4</button>
+                <button onclick="submitAnswer('5')">5</button>
+            </div>
+        </section>
+        <section id="carousel">
+            <h2>Image Carousel</h2>
+            <div class="carousel">
+                <button onclick="prevImage()">&#8592;</button>
+                <img id="carouselImage" src="https://via.placeholder.com/500x300?text=Image+1" alt="carousel image"/>
+                <button onclick="nextImage()">&#8594;</button>
+            </div>
+        </section>
+        <section id="api">
+            <h2>Joke from API</h2>
+            <button onclick="fetchJoke()">Get a Joke</button>
+            <p id="joke-output">Click the button to see a joke!</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
